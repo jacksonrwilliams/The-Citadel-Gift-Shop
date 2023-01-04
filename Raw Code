@@ -1,0 +1,75 @@
+print("Welcome to The Citadel's Gift Shop! Let's work on your order.")
+print("Our store sells Plumbuses, Meeseeks Boxes, and Portal Fluid. This site will go through each product to see if you would like to purchase any. Prices per unit vary based on the quanitiy of the order.")
+print( )
+
+
+
+Plumbuses=input("Would you like any Plumbuses? Yes or No?").capitalize().strip()
+print(Plumbuses)
+
+if Plumbuses=="Yes":
+    Quantity_of_Plumbuses=int(input("How many Plumbuses would you like?"))
+    if Quantity_of_Plumbuses<5:
+        Cost_Plumbuses= int(20*Quantity_of_Plumbuses)
+        print("$", Cost_Plumbuses)
+    elif Quantity_of_Plumbuses>=5 and Quantity_of_Plumbuses < 15:
+        Cost_Plumbuses=int(17.5*Quantity_of_Plumbuses)
+        print("$", Cost_Plumbuses)
+    else:
+        Cost_Plumbuses=20*Quantity_of_Plumbuses
+        print("$", Cost_Plumbuses)
+elif Plumbuses=="No":
+    Cost_Plumbuses=(0)
+    print()
+else:
+    Cost_Plumbuses=(0)
+    print("Oops! Looks like a typo. We’ll treat that as a no.")
+    
+
+
+Meeseeks_Boxes=input("Would you like any Meseeks Boxes? Yes or No?").capitalize().strip()
+print(Meeseeks_Boxes)
+
+if Meeseeks_Boxes=="Yes":
+    Quantity_of_Meeseeks_Boxes=int(input("How many Meeseeks Boxes would you like?"))
+    if Quantity_of_Meeseeks_Boxes<10:
+       Cost_Meeseeks_Boxes= int(1.75*Quantity_of_Meeseeks_Boxes)
+       print("$", Cost_Meeseeks_Boxes)
+    elif Quantity_of_Meeseeks_Boxes>=10 and Quantity_of_Meeseeks_Boxes<18:
+           Cost_Meeseeks_Boxes=int(1.5*Quantity_of_Meeseeks_Boxes)
+           print("$", Cost_Meeseeks_Boxes)
+    else:
+        Cost_Meeseeks_Boxes=int(1.25*Quantity_of_Meeseeks_Boxes)
+        print("$", Cost_Meeseeks_Boxes)
+elif Meeseeks_Boxes=="No":
+    Cost_Meeseeks_Boxes=int(0)
+    print(     )
+else:
+    Cost_Meeseeks_Boxes=int(0)
+    print("Oops! Looks like a typo. We’ll treat that as a no.")
+       
+
+
+Portal_Fluid=input("Would you like any Portal Fluid? Yes or No?").capitalize().strip()
+print(Portal_Fluid)
+if Portal_Fluid=="Yes":
+    Quantity_of_Portal_Fluid=float(input("How many gallons of Portal Fluid would you like?"))
+    if Quantity_of_Portal_Fluid<3:
+       Cost_Portal_Fluid= 8*Quantity_of_Portal_Fluid
+       print("$", Cost_Portal_Fluid)
+    elif Quantity_of_Portal_Fluid>=3 and Quantity_of_Portal_Fluid<7:
+        Cost_Portal_Fluid=7*Quantity_of_Portal_Fluid
+        print("$", Cost_Portal_Fluid)
+    else:
+        Cost_Portal_Fluid=6*Quantity_of_Portal_Fluid
+        print("$", Cost_Portal_Fluid)
+elif Portal_Fluid=="No":
+    Cost_Portal_Fluid=int(0)
+    print()
+
+else:
+    Cost_Portal_Fluid=int(0)
+    print("Oops! Looks like a typo. We’ll treat that as a no.")
+    
+Total_Cost=round(Cost_Portal_Fluid+Cost_Meeseeks_Boxes+Cost_Plumbuses,2)
+print("Your final cost today is $",Total_Cost, ". Thank You For Shopping With Us!")
